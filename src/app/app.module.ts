@@ -7,10 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { SharedModule } from './modules/shared/shared.module';
-import { environment } from 'src/environments/environments.prod';
-import{AngularFireModule} from '@angular/fire/compat/';
-import{AngularFireAuthModule} from '@angular/fire/compat/auth'
-import{AngularFireStorageModule} from '@angular/fire/compat/storage'
+import { environment } from 'src/environments/environments';
+import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFireAuthModule } from '@angular/fire/compat/auth'
+import { AngularFireStorageModule } from '@angular/fire/compat/storage'
 
 
 @NgModule({
@@ -25,7 +25,6 @@ import{AngularFireStorageModule} from '@angular/fire/compat/storage'
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
