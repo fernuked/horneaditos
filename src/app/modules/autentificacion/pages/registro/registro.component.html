@@ -1,1 +1,54 @@
-<p>registro works!</p>
+<div class="container"></div>
+    <div class="row">
+        <h1>Registrate</h1>
+        <i class="material-icons" style="font-size: 150px;">person</i>
+
+        <!-- Nombre de usuario. -->
+        <mat-form-field appearance="fill">
+            <mat-label>Ingrese nombre de usuario.</mat-label>
+
+            <!-- ngmodel = directiva bidireccional utilizada para formularios.  -->
+            <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ej: guadalupe.">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+        </mat-form-field>
+
+        <!-- Apellido. -->
+        <mat-form-field appearance="fill">
+            <mat-label>Ingrese su apellido.</mat-label>
+            <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: araya." requided>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <!-- Ingresar email. -->
+        <mat-form-field appearance="fill">
+            <mat-label>Ingrese su email.</mat-label>
+            <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: victorialescano@gmail.com" required>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <!-- rol de usuario -->
+        <mat-form-field>
+            <mat-label>Seleccione rol de usuario.</mat-label>
+            <select  [(ngModel)]="usuarios.rol" matNativeControl required>
+              <option value="admin">Administrador</option>
+              <option value="vis">Visitante</option>
+            </select>
+          </mat-form-field>
+
+        <!-- Registro de contraseña. -->
+        <div class="example-container">
+            <mat-form-field>
+                <mat-label>Ingrese su contraseña.</mat-label>
+                <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-hint align="start">Minimo: 6/{{input.value.length}}</mat-hint>
+            </mat-form-field>
+
+            <!-- boton para registrarse. -->
+            <button class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
+        </div>
+    </div>
