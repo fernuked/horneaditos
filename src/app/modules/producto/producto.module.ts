@@ -6,6 +6,7 @@ import { ChurrosComponent } from './pages/churros/churros.component';
 import { FacturasComponent } from './pages/facturas/facturas.component';
 import { TortasComponent } from './pages/tortas/tortas.component';
 import { ProductoComponent } from './pages/producto/producto.component';
+import { SobrenosotrosComponent } from './pages/sobrenosotros/sobrenosotros.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ProductoComponent } from './pages/producto/producto.component';
     ChurrosComponent,
     FacturasComponent,
     TortasComponent,
-    ProductoComponent
+    ProductoComponent,
+    SobrenosotrosComponent
   ],
   imports: [
     CommonModule,
