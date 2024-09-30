@@ -1,0 +1,112 @@
+/* Estilo general para la tabla */
+.table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background-color: #ccb771;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.table thead th {
+    background-color: #c29d6c;
+    color: #4a2b0a;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #eb8a1d;
+}
+
+
+.table tbody tr {
+    border-bottom: 1px solid #eb8a1d;
+}
+
+a .table tbody td {
+    padding: 10px;
+    font-size: 15px;
+    color: #4a2b0a;
+}
+
+
+.table tbody td img {
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+button.btn-outline-warning {
+    background-color: #f5b342;
+    color: #4a2b0a;
+    border: 2px solid #f5b342;
+}
+
+button.btn-outline-warning:hover {
+    background-color: #eb8a1d;
+    border-color: #eb8a1d;
+    color: #fff;
+}
+
+button.btn-outline-danger {
+    background-color: #cab46a;
+    color: #4a2b0a;
+    border: 2px solid #8b6c29;
+}
+
+button.btn-outline-danger:hover {
+    background-color: #c4a244;
+    border-color: #9c822a;
+    color: #fff;
+}
+
+button.btn-outline-primary {
+    background-color: #533d1d;
+    color: #cab39a;
+    border: 2px solid #462a0d ;
+}
+
+button.btn-outline-primary:hover {
+    background-color: #b3763e;
+    border-color: #4d300a;
+    color: #fff;
+}
+
+
+.modal-content {
+    background-color: #e6d08a;
+    border-radius: 8px;
+}
+
+.modal-header {
+    background-color: #927D4E;
+    color: #ffffff;
+    border-bottom: 2px solid #412e07;
+}
+
+.modal-footer .btn-outline-success {
+    background-color: #b6986b;
+    color: #fcfcfc;
+    border: 2px solid #472908 ;
+}
+
+.modal-footer .btn-outline-success:hover {
+    background-color: #b3763e;
+    border-color: #c59a61;
+    color: #fff;
+}
+
+.modal-footer .btn-outline-secondary {
+    background-color:#beaa7e;
+    border-color: #ad7f46;
+    color: #ffffff;
+}
+
+.modal-footer .btn-outline-secondary:hover {
+    background-color: #ac7f48;
+}
+
+modal-title {
+    color: #472908;
+}

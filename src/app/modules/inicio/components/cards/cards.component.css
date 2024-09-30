@@ -1,0 +1,76 @@
+
+body {
+    font-family: 'Great Vibes', cursive; 
+    font-style: italic;
+    padding-bottom: 500px;
+    background-color: rgb(225, 236, 245);
+}
+
+/* Contenedor de las tarjetas */
+.contenedor-tarjetas {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: inherit;
+}
+
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #a3844b;
+    border-radius: 8px;
+    padding: 14px;
+   
+    text-align: center;
+    font-family: inherit;
+}
+
+/* Estilos para la imagen */
+.imagen {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Tarjeta de ejemplo */
+.example-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: inherit;
+}
+
+
+mat-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    font-family: inherit;
+}
+
+/* Centrar los botones */
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-family: inherit;
+}

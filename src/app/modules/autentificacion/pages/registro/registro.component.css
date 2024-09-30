@@ -1,0 +1,66 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* Estilo para la fila */
+.row {
+    background-color: #927D4E;
+    padding: 20px; 
+    border-radius: 5px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Ajustar el campo de texto */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: transparent; 
+    border-radius: 5px; 
+    
+}
+
+/* Ajustar los íconos */
+mat-icon {
+    color: #dac0a9 ;
+    font-size: 20px; 
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    color: #a1887f;
+}
+
+/* Ajustar el borde inferior del input */
+.mat-form-field-underline {
+    background-color: #a1887f; 
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0px; 
+    margin-top: 5px; 
+}
+
+/* Ajuste del botón de registrar */
+.boton {
+    background-color: #505527;
+    color:  #ffffff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #354628;
+}
+

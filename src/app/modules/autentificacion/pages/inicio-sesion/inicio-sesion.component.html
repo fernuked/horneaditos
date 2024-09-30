@@ -1,0 +1,42 @@
+<!-- pagina de inicio de sesion -->
+<div class="container">
+    <div class="row">
+
+        <!-- Título  -->
+        <h1>INICIO SESION</h1>
+        <h1>────── ⋆⋅☆⋅⋆ ──────</h1>
+
+        <!-- Ícono -->
+        <i class="material-icons" style="font-size: 200px;">person</i>
+
+        <!-- ingresar el correo electrónico -->
+        <mat-form-field appearance="fill">
+            <mat-label>Ingrese su email:</mat-label>
+
+            <!--  Correo electrónico -->
+            <!-- Se utiliza [(ngModel)] para enlazar bidireccionalmente el valor con la propiedad 'email' en el componente -->
+            <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: guadaaraya50@gmail.com" required>
+        </mat-form-field>
+
+        <!-- ingresar la contraseña -->
+        <mat-form-field>
+            <mat-label>Ingrese su contraseña:</mat-label>
+
+            <!-- Campo de entrada donde el usuario ingresa su contraseña -->
+            <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6"
+                required>
+
+            <!-- Botón para la visibilidad de la contraseña -->
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <!-- Ícono que cambia entre 'visibility_off' y 'visibility' dependiendo del estado de 'hide' -->
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+
+            <!--  longitud mínima requerida para la contraseña -->
+            <mat-hint align="start">Mínimo:6/{{input.value.length}}</mat-hint>
+        </mat-form-field>
+
+        <button class="boton" mat-raised-button color="primary" (click)="iniciarSesion()">Iniciar Sesión</button>
+    </div>
+</div>

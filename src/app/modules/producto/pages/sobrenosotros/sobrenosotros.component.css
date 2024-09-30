@@ -1,0 +1,76 @@
+.sobre-nosotros {
+    background-color: #fff8e1; 
+    padding: 50px 20px;
+    text-align: center;
+    color: #4a2b0a;
+}
+
+
+.sobre-nosotros .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sobre-nosotros h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f5c78b; 
+}
+
+
+.sobre-nosotros .contenido {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.sobre-nosotros .imagen img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 30px;
+}
+
+
+.sobre-nosotros .texto {
+    max-width: 600px;
+    text-align: left;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic; 
+}
+
+.sobre-nosotros .texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #4a2b0a;
+}
+
+.sobre-nosotros .texto strong {
+    color: #eb8a1d; 
+}
+
+/* hola profe, esto lo hice con chatgpt porq no le se jejejej */
+@media (max-width: 768px) {
+    .sobre-nosotros .contenido {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .sobre-nosotros .imagen img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .sobre-nosotros .texto {
+        text-align: center;
+    }
+}

@@ -1,0 +1,27 @@
+<br>
+<div class="container"> 
+    <div class="row 3"> <!-- Fila que contiene las columnas donde se renderizan las tarjetas -->
+        <!-- Directiva *ngFor que recorre el array 'info' para generar una tarjeta por cada producto -->
+        <div *ngFor="let i of info" class="col-sm-12 col-md-6 col-lg-4">
+            <div class="contenido"> 
+                <mat-card class="example-card">
+                    <mat-card-header> <!-- Cabecera de la tarjeta -->
+                        <mat-card-title>{{i.nombre}}</mat-card-title> <!-- Título de la tarjeta que muestra el nombre del producto -->
+                    </mat-card-header>
+                    <!-- Imagen del producto dentro de la tarjeta -->
+                    <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}"> 
+                    <mat-card-content> <!-- Contenido de la tarjeta -->
+                        <p>{{i.descripccion}}</p> <!-- Muestra la descripción del producto -->
+                    </mat-card-content>
+                    <mat-card-actions> <!-- Sección de botones con acciones para el usuario -->
+                        <button mat-button>FAVORITO</button> <!-- Botón para marcar como favorito -->
+                        <button mat-button>AÑADIR</button> <!-- Botón para añadir el producto -->
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
