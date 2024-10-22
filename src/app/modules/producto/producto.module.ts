@@ -6,12 +6,13 @@ import { ChurrosComponent } from './pages/churros/churros.component';
 import { FacturasComponent } from './pages/facturas/facturas.component';
 import { TortasComponent } from './pages/tortas/tortas.component';
 import { ProductoComponent } from './pages/producto/producto.component';
-import { SobrenosotrosComponent } from './pages/sobrenosotros/sobrenosotros.component'; 
+import { SobrenosotrosComponent } from '../informacion/pages/sobrenosotros/sobrenosotros.component'; 
 
 import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
-
+//Importamos, modulos, componentes, etc.
+//Declramos, importamos y exportamos. 
 
 @NgModule({
   declarations: [

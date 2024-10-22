@@ -1,31 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './modules/inicio/pages/inicio/inicio.component';
-import { ChurrosComponent } from './modules/producto/pages/churros/churros.component';
-import { FacturasComponent } from './modules/producto/pages/facturas/facturas.component';
-import { TortasComponent } from './modules/producto/pages/tortas/tortas.component';
-import { SobrenosotrosComponent } from './modules/producto/pages/sobrenosotros/sobrenosotros.component';
+import { rutaProtegidaGuard } from './guards/rutaprotegida.guard';
 
 const routes: Routes = [
 
-  { path: '', component: InicioComponent },
-  {
-    path: "churros", component: ChurrosComponent
-  },
-
-  {
-    path: "facturas", component: FacturasComponent
-  },
-  {
-    path: "tortas", component: TortasComponent
-  },
-  {
-    path: "sobrenosotros", component: SobrenosotrosComponent
-  },
+//Importamos rutas para los distintos modules: inicio, producto, autentificacion, admin e informacion. 
   {
     path: "", component: InicioComponent
 
   },
+  //Ejemplo: La ruta padre va hacia las rutas hijas (padre: modules) (hijas: inicio, producto, etc)
   { 
     path: '', loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule) 
   },
@@ -38,7 +23,15 @@ const routes: Routes = [
   },
   { 
     path: '', loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule) 
+  },
+  { 
+    path: '', loadChildren: () => import('./modules/informacion/informacion.module').then(m => m.InformacionModule) 
+  },
+  { path:"",loadChildren:()=> import('./modules/admin/admin.module').then(m=>m.AdminModule),
+    canActivate : [rutaProtegidaGuard], data: {role: 'admin'}
   }
+
+  
 ];
 
 @NgModule({

@@ -3,9 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChurrosComponent } from './pages/churros/churros.component';
 import { FacturasComponent } from './pages/facturas/facturas.component';
 import { TortasComponent } from './pages/tortas/tortas.component';
-import { SobrenosotrosComponent } from './pages/sobrenosotros/sobrenosotros.component';
-import { AdminComponent } from '../admin/pages/admin/admin.component';
 
+//Importamos rutas de secciones en su respectivo modulo. 
 
 const routes: Routes = [
   {
@@ -18,13 +17,7 @@ const routes: Routes = [
   {
     path: "tortas", component: TortasComponent
   },
-  {
-    path: "sobrenosotros", component: SobrenosotrosComponent
-  },
-  {
-    path: "admin", component: AdminComponent
 
-  }
 ];
 
 @NgModule({

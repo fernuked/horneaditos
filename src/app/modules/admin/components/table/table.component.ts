@@ -21,7 +21,7 @@ export class TableComponent {
   producto = new FormGroup({
     nombre: new FormControl('', Validators.required), 
     precio: new FormControl(0, Validators.required), 
-    descripcion: new FormControl('', Validators.required), 
+    descripccion: new FormControl('', Validators.required), 
     categoria: new FormControl('', Validators.required), 
     imagen: new FormControl('', Validators.required),
     alt: new FormControl('', Validators.required) 
@@ -31,7 +31,10 @@ export class TableComponent {
   constructor(public servicioCrud: CrudService) { }
 
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.servicioCrud.obtenerProducto().subscribe(producto => {this.coleccionProductos = producto}) 
+   }
+
   async agregarProducto() {
     if (this.producto.valid) {
       // Creación de un nuevo producto basado en los valores del formulario
@@ -39,7 +42,7 @@ export class TableComponent {
         idProducto: '',
         nombre: this.producto.value.nombre!,
         precio: this.producto.value.precio!,
-        descripccion: this.producto.value.descripcion!,
+        descripccion: this.producto.value.descripccion!,
         categoria: this.producto.value.categoria!,
         imagen: this.producto.value.imagen!,
         alt: this.producto.value.alt!
@@ -78,7 +81,7 @@ export class TableComponent {
     this.producto.setValue({
       nombre: productoSeleccionado.nombre,
       precio: productoSeleccionado.precio,
-      descripcion: productoSeleccionado.descripccion,
+      descripccion: productoSeleccionado.descripccion,
       categoria: productoSeleccionado.categoria,
       imagen: productoSeleccionado.imagen,
       alt: productoSeleccionado.alt
@@ -91,7 +94,7 @@ export class TableComponent {
       idProducto: this.productoSeleccionado.idProducto, 
       nombre: this.producto.value.nombre!,
       precio: this.producto.value.precio!, 
-      descripccion: this.producto.value.descripcion!, 
+      descripccion: this.producto.value.descripccion!, 
       categoria: this.producto.value.categoria!,
       imagen: this.producto.value.imagen!, 
       alt: this.producto.value.alt!
