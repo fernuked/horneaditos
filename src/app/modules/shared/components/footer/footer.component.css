@@ -1,58 +1,66 @@
 /* Estilos para el footer */
 .footer {
-    display: flex;
-    justify-content: space-between; /* Distribuye el texto y la imagen uno al lado del otro */
-    align-items: center;            /* Alinea verticalmente al centro */
-    background-color: #f5f5dc;      /* Fondo beige claro */
-    padding: 20px 40px;             /* Espacio interno */
-    border-top: 4px solid #433512;  /* Borde superior marrón */
-    color: #433512;                 /* Color marrón para el texto */
+  display: flex;
+  justify-content: space-between; /* Distribuye el texto y la imagen uno al lado del otro */
+  align-items: center;            /* Alinea verticalmente al centro */
+  background-color: #f5f5dc;      /* Fondo beige claro */
+  padding: 20px 40px;             /* Espacio interno */
+  border-top: 4px solid #433512;  /* Borde superior marrón */
+  color: #433512;                 /* Color marrón para el texto */
+}
+
+
+.footer-content {
+  flex: 1;                        /* Ocupa el mismo espacio que la imagen */
+  max-width: 50%;                 /* Limita el ancho máximo del contenido */
+  font-family: 'Georgia', serif;  }
+
+
+.footer-content h3 {
+  font-size: 24px;                /* Tamaño más grande para el título */
+  margin-bottom: 10px;
+  color: #6b4226;                 /* Marrón un poco más oscuro */
+}
+
+.footer-content p {
+  font-size: 16px;                /* Tamaño del texto */
+  line-height: 1.5;               /* Espaciado entre líneas */
+  margin: 5px 0;
+}
+
+
+.footer-image {
+  flex: 1;                        /* Ocupa el mismo espacio que el texto */
+  max-width: 50%;                 /* Limita el ancho máximo de la imagen */
+}
+
+.footer-image img {
+  width: 100%;                    
+  height: auto;                   
+  object-fit: contain;           
+}
+
+
+@media (max-width: 480px) {
+  .footer {
+      flex-direction: column;        
+      text-align: center;            
+      padding: 10px 20px;           
   }
-  
-  /* Estilos para el contenido del footer (texto) */
-  .footer-content {
-    flex: 1;                        /* Ocupa el mismo espacio que la imagen */
-    max-width: 50%;                 /* Limita el ancho máximo del contenido */
-    font-family: 'Georgia', serif;  /* Tipografía elegante */
+
+  .footer-content, .footer-image {
+      max-width: 100%;              
   }
-  
-  .footer-content h3 {
-    font-size: 24px;                /* Tamaño más grande para el título */
-    margin-bottom: 10px;
-    color: #6b4226;                 /* Marrón un poco más oscuro */
-  }
-  
-  .footer-content p {
-    font-size: 16px;                /* Tamaño del texto */
-    line-height: 1.5;               /* Espaciado entre líneas */
-    margin: 5px 0;
-  }
-  
-  /* Estilos para la imagen del footer */
+
   .footer-image {
-    flex: 1;                        /* Ocupa el mismo espacio que el texto */
-    max-width: 50%;                 /* Limita el ancho máximo de la imagen */
+      margin-top: 15px;             
   }
-  
-  .footer-image img {
-    width: 100%;                    /* La imagen ocupa todo el ancho del contenedor */
-    height: auto;                   /* Mantiene las proporciones de la imagen */
-    object-fit: contain;            /* Ajusta la imagen sin deformarla */
+
+  .footer-content h3 {
+      font-size: 20px;                
   }
-  
-  /* Responsive: para pantallas más pequeñas */
-  @media (max-width: 768px) {
-    .footer {
-      flex-direction: column;        /* Cambia a formato vertical en pantallas pequeñas */
-      text-align: center;            /* Centra el texto */
-    }
-  
-    .footer-content, .footer-image {
-      max-width: 100%;               /* En pantallas pequeñas, ambos ocupan todo el ancho */
-    }
-  
-    .footer-image {
-      margin-top: 20px;              /* Añade un margen superior entre texto e imagen */
-    }
+
+  .footer-content p {
+      font-size: 14px;                
   }
-  
+}

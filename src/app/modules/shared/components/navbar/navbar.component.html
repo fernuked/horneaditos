@@ -4,12 +4,12 @@
         <mat-icon>menu</mat-icon>
     </button>
 
-    <!-- Menú principal -->q
+    <!-- Menú principal -->
     <mat-menu #principal="matMenu">
         <button mat-menu-item routerLink="/inicio">Inicio</button>
         <button mat-menu-item [matMenuTriggerFor]="productos">Productos</button>
         <button mat-menu-item routerLink="/contacto">Sobre Nosotros</button>
-        <button id="menuAdmins" mat-button routerLink="/admin">Admin</button>
+        
     </mat-menu>
 
     <!-- Menu de Productos -->
@@ -18,7 +18,7 @@
         <button mat-menu-item routerLink="/churros">Churros</button>
         <button mat-menu-item routerLink="/tortas">Tortas</button>
     </mat-menu>
-    <button id="menuAdmins" mat-button routerLink="/admin">Admin</button>
+
     <!-- Nombre o Logo -->
     <a class="navbar-brand" routerLink="/">
         <img src="assets/logo.png" alt="Logo" class="logo" />

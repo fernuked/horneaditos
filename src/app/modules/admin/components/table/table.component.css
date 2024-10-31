@@ -8,39 +8,36 @@
     overflow: hidden;
 }
 
-
 .table thead th {
     background-color: #c29d6c;
     color: #4a2b0a;
-    padding: 12px;
+    padding: 8px; 
     text-align: left;
-    font-size: 16px;
+    font-size: 14px; 
     text-transform: uppercase;
-    border-bottom: 3px solid #eb8a1d;
+    border-bottom: 2px solid #eb8a1d; 
 }
-
 
 .table tbody tr {
     border-bottom: 1px solid #eb8a1d;
 }
 
 a .table tbody td {
-    padding: 10px;
-    font-size: 15px;
+    padding: 8px; 
+    font-size: 14px; 
     color: #4a2b0a;
 }
-
 
 .table tbody td img {
     border-radius: 6px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
 button.btn-outline-warning {
     background-color: #f5b342;
     color: #4a2b0a;
     border: 2px solid #f5b342;
+    font-size: 14px; 
 }
 
 button.btn-outline-warning:hover {
@@ -53,7 +50,7 @@ button.btn-outline-danger {
     background-color: #cab46a;
     color: #4a2b0a;
     border: 2px solid #8b6c29;
-}
+    font-size: 14px; }
 
 button.btn-outline-danger:hover {
     background-color: #c4a244;
@@ -64,7 +61,8 @@ button.btn-outline-danger:hover {
 button.btn-outline-primary {
     background-color: #533d1d;
     color: #cab39a;
-    border: 2px solid #462a0d ;
+    border: 2px solid #462a0d;
+    font-size: 14px; 
 }
 
 button.btn-outline-primary:hover {
@@ -72,7 +70,6 @@ button.btn-outline-primary:hover {
     border-color: #4d300a;
     color: #fff;
 }
-
 
 .modal-content {
     background-color: #e6d08a;
@@ -88,7 +85,8 @@ button.btn-outline-primary:hover {
 .modal-footer .btn-outline-success {
     background-color: #b6986b;
     color: #fcfcfc;
-    border: 2px solid #472908 ;
+    border: 2px solid #472908;
+    font-size: 14px; 
 }
 
 .modal-footer .btn-outline-success:hover {
@@ -98,15 +96,30 @@ button.btn-outline-primary:hover {
 }
 
 .modal-footer .btn-outline-secondary {
-    background-color:#beaa7e;
+    background-color: #beaa7e;
     border-color: #ad7f46;
     color: #ffffff;
+    font-size: 14px; 
 }
 
 .modal-footer .btn-outline-secondary:hover {
     background-color: #ac7f48;
 }
 
-modal-title {
+.modal-title {
     color: #472908;
+}
+
+
+@media (max-width: 480px) {
+    .table thead th {
+        font-size: 12px; }
+
+    .table tbody td {
+        font-size: 12px; 
+    }
+
+    button {
+        font-size: 12px; 
+    }
 }

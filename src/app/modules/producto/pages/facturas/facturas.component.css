@@ -1,75 +1,104 @@
-/* Estilo general del cuerpo con fuente cursiva y espacio al final */
 body {
-    font-family: 'Great Vibes', cursive; /* Fuente */
-    font-style: italic; /* Estilo en cursiva */
-    padding-bottom: 500px; /* Espacio  */
+    font-family: 'Great Vibes', cursive; 
+    font-style: italic;
+    padding-bottom: 500px;
+    background-color: rgb(225, 236, 245);
 }
 
-/* Contenedor que organiza las tarjetas en columnas */
 .contenedor-tarjetas {
-    flex-direction: column; 
-    gap: 5px; 
+    flex-direction: column;
+    gap: 5px;
     align-items: center;
     padding: 20px;
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
+    font-family: inherit;
+    background-color: aliceblue;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #a3844b;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+    font-family: inherit;
+    background-color: #ffffff;  
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.example-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: inherit;
+    background-color: #ffffff;
+}
+
+mat-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
     font-family: inherit;
 }
 
-/* Estilos para cada tarjeta individual */
-.contenido {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    width: 100%; 
-    max-width: 300px; /* Ancho máximo de la tarjeta */
-    box-sizing: border-box; 
-    border: 1px solid #a3844b; 
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 14px; 
-    background-color: #f9f9f9; 
-    text-align: center;
-    font-family: inherit; 
-}
-
-/* Estilos para la imagen dentro de la tarjeta */
-.imagen {
-    width: 100%; 
-    height: auto; 
-    max-height: 300px; 
-    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
-    border-radius: 8px; 
-}
-
-/* Estilos para la tarjeta  */
-.example-card {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: center;
-    width: 100%; 
-    height: 100%; 
-    text-align: center; 
-    font-family: inherit; 
-}
-
-/* Estilos para el contenido de la tarjeta */
-mat-card-content {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center;
-    text-align: center; 
-    margin-top: 10px; 
-    font-family: inherit; 
-}
-
-/* Estilos para los botoness de la tarjeta */
 mat-card-actions {
-    display: flex; 
-    justify-content: center; 
-    gap: 10px; 
-    width: 100%; 
-    margin-top: 10px; 
-    font-family: inherit; 
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-family: inherit;
+}
+
+/* Media query para dispositivos con ancho máximo de 480px */
+@media (max-width: 480px) {
+    body {
+        padding-bottom: 300px;
+    }
+
+    .contenedor-tarjetas {
+        padding: 10px;
+    }
+
+    .contenido {
+        max-width: 100%; /* Ajuste para que ocupe el ancho completo */
+        padding: 10px; /* Reducir el padding */
+        border-radius: 6px;
+    }
+
+    .imagen {
+        max-height: 200px; /* Reducir el tamaño máximo de la imagen */
+    }
+
+    .example-card {
+        padding: 10px; /* Reducir el padding en dispositivos pequeños */
+    }
+
+    mat-card-content {
+        margin-top: 5px; /* Reducir el margen superior */
+    }
+
+    mat-card-actions {
+        gap: 5px; /* Reducir el espacio entre botones */
+    }
 }
