@@ -1,5 +1,5 @@
 .sobre-nosotros {
-    background-color: #fff8e1; 
+    background-color: #ffffff; 
     padding: 50px 20px;
     text-align: center;
     color: #4a2b0a;
@@ -16,7 +16,10 @@
 .sobre-nosotros h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #f5c78b; 
+    color: #d3af4d; 
+    font-family: 'Pacifico', cursive;
+    font-family: 'Lora', serif;
+    font-style: italic; 
 }
 
 .sobre-nosotros .contenido {
@@ -28,10 +31,10 @@
 }
 
 .sobre-nosotros .imagen img {
-    width: 350px;
+    width: 350px; 
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    margin-right: 30px;
+    margin-right: 40px; 
 }
 
 .sobre-nosotros .texto {
@@ -40,6 +43,7 @@
     font-family: 'Pacifico', cursive;
     font-family: 'Lora', serif;
     font-style: italic; 
+    margin-top: 20px; 
 }
 
 .sobre-nosotros .texto p {
@@ -71,7 +75,7 @@
     .sobre-nosotros .imagen img {
         width: 100%; 
         margin-right: 0; 
-        margin-bottom: 15px; 
+        margin-bottom: 19px; 
     }
 
     .sobre-nosotros .texto {
@@ -83,4 +87,3 @@
         font-size: 16px; 
     }
 }
-

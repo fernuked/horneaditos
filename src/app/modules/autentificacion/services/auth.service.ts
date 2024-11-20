@@ -51,18 +51,33 @@ export class AuthService {
     }
   }
 
-  obtenerUsuario(email: string) {
-    // retornamos del servicio firestore la coleccion de usuarios, buscamos referencia en los email 
-    // registrados y los comparamos con lo que ingrese el usuario al ingresar sesion y lo obtiene 
-    // con el '.get()', lo vuelve una promesa RESUELTO O RECHAZADO.
+  // Método que obtiene un usuario de la base de datos Firestore según el email.
+obtenerUsuario(email: string) {
+   
+  // Se realiza una consulta a la colección 'usuarios' en Firestore,
+  // buscando todos los documentos donde el campo 'email' sea igual al email
+  // proporcionado como argumento. Utilizamos '.get()' para obtener la información,
+  // lo que devuelve una promesa que puede ser resuelta o rechazada.
+  
+  // Retorna la consulta de Firestore en forma de promesa (asíncrona), que se resuelve
+  // cuando se obtienen los datos o se rechaza si ocurre un error.
 
-    return this.servicioFirestore.collection('usuarios', ref => ref.where('email', "==", email)).get().toPromise();
-  }
+  return this.servicioFirestore.collection('usuarios', ref => ref.where('email', "==", email)).get().toPromise();
+}
 
-  obtenerRol(uid: string): Observable<string | null> {
-    return this.servicioFirestore.collection("usuarios").doc(uid).valueChanges()
-      .pipe(map((usuario: any) => usuario ? usuario.rol : null));
+// Método que obtiene el rol de un usuario a partir de su UID.
+obtenerRol(uid: string): Observable<string | null> {
 
-
-  }
+  // Se obtiene el rol de un usuario buscando el documento con el 'uid' proporcionado.
+  // Utilizamos 'valueChanges()' para obtener los datos del documento en tiempo real,
+  // lo que significa que se escuchará cualquier cambio en ese documento.
+  // Si el documento no existe, devolverá 'null'.
+  
+  return this.servicioFirestore.collection("usuarios")  // Accede a la colección 'usuarios'.
+    .doc(uid)  // Accede al documento con el UID proporcionado.
+    .valueChanges()  // Obtiene los cambios del documento de forma reactiva.
+    .pipe(  // Utiliza pipe para transformar el flujo de datos.
+      map((usuario: any) => usuario ? usuario.rol : null)  // Mapea el documento recibido, extrayendo solo el 'rol'. Si el usuario no existe, retorna 'null'.
+    );
+}
 }

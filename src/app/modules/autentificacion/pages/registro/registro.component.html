@@ -1,56 +1,80 @@
 <br>
-<br>
+<!-- Contenedor principal de la vista de registro -->
 <div class="container">
     <div class="row">
+        <!-- Título de la página: "Registro" -->
         <h1>REGISTRO</h1>
         <h1>────── ⋆⋅☆⋅⋆ ──────</h1>
+        <!-- Icono de persona para representar el registro de usuario -->
         <i class="material-icons" style="font-size: 150px;">person</i>
 
-        <!-- Nombre de usuario. -->
+        <!-- Campo para ingresar el nombre de usuario -->
         <mat-form-field appearance="fill">
             <mat-label>Ingrese nombre de usuario.</mat-label>
+            <!-- Enlace bidireccional de datos (ngModel) para el campo 'nombre' en el objeto 'usuarios' -->
             <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ej: guadalupe.">
+            <!-- Icono que aparece en el campo de entrada -->
+<!-- 
+            A diferencia de los formularios reactivos, que usan FormGroup y FormControl para manejar el estado y
+            validación del formulario en el código TypeScript, los formularios ngModel gestionan todo directamente
+            desde el HTML.
+
+            La directiva ngModel se utiliza para realizar una vinculación bidireccional de datos,
+            entre el modelo de datos en el componente y los campos del formulario en la vista. Esto significa que
+            cualquier cambio en el modelo de datos se refleja automáticamente en el formulario, y cualquier cambio
+            realizado en el formulario se refleja automáticamente en el modelo de datos. -->
+
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
 
-        <!-- Apellido. -->
+        <!-- Campo para ingresar el apellido -->
         <mat-form-field appearance="fill">
             <mat-label>Ingrese su apellido.</mat-label>
-            <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: araya."  required>
+            <!-- Enlace bidireccional de datos (ngModel) para el campo 'apellido' en el objeto 'usuarios' -->
+            <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: araya." required>
+            <!-- Icono que aparece en el campo de entrada -->
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
 
-        <!-- Ingresar email. -->
+        <!-- Campo para ingresar el email del usuario -->
         <mat-form-field appearance="fill">
             <mat-label>Ingrese su email.</mat-label>
-            <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: guadalupearaya@gmail.com"  required>
+            <!-- Enlace bidireccional de datos (ngModel) para el campo 'email' en el objeto 'usuarios' -->
+            <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: guadalupearaya@gmail.com" required>
+            <!-- Icono que aparece en el campo de entrada -->
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
 
-        <!-- rol de usuario -->
+        <!-- Selector para definir el rol del usuario -->
         <mat-form-field>
             <mat-label>Seleccione rol de usuario.</mat-label>
+            <!-- Enlace bidireccional de datos (ngModel) para el campo 'rol' en el objeto 'usuarios' -->
             <select [(ngModel)]="usuarios.rol" matNativeControl required>
+                <!-- Opciones para el rol de usuario: Administrador o Visitante -->
                 <option value="admin">Administrador</option>
                 <option value="vis">Visitante</option>
             </select>
         </mat-form-field>
 
-        <!-- Registro de contraseña. -->
+        <!-- Campo para ingresar la contraseña del usuario -->
         <div class="example-container">
             <mat-form-field class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
                 <mat-label>Ingrese su contraseña.</mat-label>
+                <!-- Enlace bidireccional de datos (ngModel) para el campo 'password' en el objeto 'usuarios' -->
                 <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6"
                     required>
+                <!-- Botón para alternar la visibilidad de la contraseña -->
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                     [attr.aria-pressed]="hide">
+                    <!-- Icono que cambia según la visibilidad de la contraseña -->
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
+                <!-- Indicador de la longitud de la contraseña -->
                 <mat-hint align="start">Minimo: 6/{{input.value.length}}</mat-hint>
             </mat-form-field>
 
-            <!-- boton para registrarse. -->
-            <button class="boton" mat-raised-button (click)="registrar()">Registrar</button>
+            <!-- Botón para ejecutar la función de registro -->
+            <button class="boton" mat-raised-button (click)="registrarUsuarios()">Registrar</button>
         </div>
     </div>
 </div>

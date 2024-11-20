@@ -16,7 +16,7 @@ export class FirestoreService {
     this.usuariosCollection = this.database.collection<Usuario>('usuarios')
   }
 
-  agregarUusario(usuario: Usuario, id: string) {
+  agregarUsuario(usuario: Usuario, id: string) {
 
     return new Promise(async (resolve, reject) => {
 
@@ -27,9 +27,9 @@ export class FirestoreService {
 
         resolve(resultado);
 
-      } catch (erorr) {
+      } catch (error) {
 
-        reject(erorr);
+        reject(error);
       }
     })
   }
